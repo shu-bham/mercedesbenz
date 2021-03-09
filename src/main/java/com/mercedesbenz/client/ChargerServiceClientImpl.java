@@ -16,6 +16,6 @@ public class ChargerServiceClientImpl
 
     @Override
     public Mono<ChargerDataList> getChargerData() {
-        return WebClient.builder().baseUrl(chargerUrl).build().get().retrieve().bodyToMono(ChargerDataList.class).log();
+        return WebClient.builder().baseUrl(chargerUrl).build().get().retrieve().bodyToMono(ChargerDataList.class);
     }
 }
